@@ -67,9 +67,7 @@ let arr6:(number|string)[]=new Array(); // all values of type string or number
 arr6.push(56);
 arr6.push("hello");
 
-
 // Tuples
-
 //let emps:[number, string]=['hari', 1234]
 let emps:[number, string]=[1234, 'hari']
 emps[1]='pooja'
@@ -82,3 +80,22 @@ console.log(emps2);
 let emps3=[1234, 'hari'] as const
 //emps3[1]='pooja';   // immutable
 console.log(emps3);
+
+
+
+type Person={
+    pname:string,
+    page:number;
+}
+
+let person:Person={
+    pname:'ram',
+    page:67,
+   // addhar:567889
+}
+
+let person2={
+    pname:'ram',
+    page:67,
+  //  addhar:567889
+} satisfies Person
