@@ -44,4 +44,28 @@ let baselocation="Dadar"; // string
 //baselocation=4567;
 console.log(baselocation.length);
 
+const direction="UP"; // string
+console.log(typeof direction);
 
+// literal type
+
+let dir='UP' as const; // literal assgined as const
+//dir='DOWN';
+console.log(typeof dir); // string
+console.log(dir);
+
+
+const dirr='UP';  // literal saved in const
+//dirr='DOWN';
+
+
+let color:'blue'; // literal type annotation
+color='blue';
+//color='red';
+console.log(typeof color); // string
+
+const pie=3.142;
+
+
+let budget=56789000;
+let newbudget=budget as any;

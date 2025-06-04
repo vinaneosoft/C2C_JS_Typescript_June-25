@@ -18,5 +18,21 @@ var company; // any
 console.log(typeof company); // undefined
 company = "Neosoft";
 console.log(typeof company); // string
+console.log(company.length);
+console.log(company.length);
+var com = company;
+console.log(com.length);
 company = 677888;
 console.log(typeof company); // number
+var baselocation = "Dadar"; // string
+//baselocation=4567;
+console.log(baselocation.length);
+var direction = "UP"; // string
+console.log(typeof direction);
+// literal type
+var dir = 'UP';
+console.log(typeof dir);
+console.log(dir);
+var color;
+color = 'blue';
+console.log(typeof color);
