@@ -14,3 +14,9 @@ var ecode; // either number or string allowed
 ecode = 12344;
 ecode = "e1234";
 //ecode=true;
+var company; // any
+console.log(typeof company); // undefined
+company = "Neosoft";
+console.log(typeof company); // string
+company = 677888;
+console.log(typeof company); // number

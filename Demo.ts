@@ -6,4 +6,3 @@ salary=67000;  // value
 console.log(salary); // display
 //document.write(salary+""); // document html document // front end
 
-let myname="veena";
