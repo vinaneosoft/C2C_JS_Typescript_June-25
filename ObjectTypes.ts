@@ -19,3 +19,17 @@ let obj:Object
 obj=new Object();
 
 let obj2=new Object();
+
+
+enum Direction{
+    UP, DOWN, LEFT, RIGHT
+}
+
+let direction1:Direction
+direction1=Direction.LEFT;
+console.log(direction1);
+
+let direction2=Direction.UP;
+console.log(direction2);
+console.log(typeof direction1);
+
