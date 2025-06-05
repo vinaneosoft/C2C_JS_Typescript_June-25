@@ -39,7 +39,6 @@ console.log(com.length);
 company=677888;
 console.log(typeof company); // number
 
-
 let baselocation="Dadar"; // string
 //baselocation=4567;
 console.log(baselocation.length);

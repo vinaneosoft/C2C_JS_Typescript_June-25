@@ -51,3 +51,5 @@ function details(value1:number | string, value2?:string) : void{
 details(101);
 details("Mahendra")
 details(101, "Mahendra")
+
+// create addfun with spread operator
