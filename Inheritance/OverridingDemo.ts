@@ -5,12 +5,14 @@ class Employee {
     public employeeSalary=0){
         console.log("super class");
     }
-    public getDetails():void{
-        console.log("super method");
-        //return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
-    }
 
-   
+    test(){
+
+    }
+    public getDetails():string{
+        console.log("super method");
+        return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
+    }
 }
 class Trainer extends Employee{
     constructor(empId=0, 
@@ -24,9 +26,11 @@ class Trainer extends Employee{
         return this.employeeSalary+this.variablePay;
     }
     public getDetails():string{
+       // this.getTotalSalary();
+       // this.test(); // inherited method
+       // super.getDetails();
         console.log("sub method");
-        return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}
-        Variable Pay: ${this.variablePay} type: ${this.trainerType}`
+        return `${super.getDetails()} Variable Pay: ${this.variablePay} type: ${this.trainerType}`
        
     }
 

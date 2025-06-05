@@ -23,6 +23,8 @@ var Employee = /** @class */ (function () {
         this.employeeSalary = employeeSalary;
         console.log("super class");
     }
+    Employee.prototype.test = function () {
+    };
     Employee.prototype.getDetails = function () {
         console.log("super method");
         return "Employee id : ".concat(this.employeeId, " Name: ").concat(this.employeeName, " Monthly Salary : ").concat(this.employeeSalary);
@@ -46,8 +48,11 @@ var Trainer = /** @class */ (function (_super) {
         return this.employeeSalary + this.variablePay;
     };
     Trainer.prototype.getDetails = function () {
+        // this.getTotalSalary();
+        // this.test(); // inherited method
+        // super.getDetails();
         console.log("sub method");
-        return "Employee id : ".concat(this.employeeId, " Name: ").concat(this.employeeName, " Monthly Salary : ").concat(this.employeeSalary, "\n        Variable Pay: ").concat(this.variablePay, " type: ").concat(this.trainerType);
+        return "".concat(_super.prototype.getDetails.call(this), " Variable Pay: ").concat(this.variablePay, " type: ").concat(this.trainerType);
     };
     return Trainer;
 }(Employee)); // end
@@ -56,3 +61,10 @@ console.log(employee1.getDetails());
 var trainer1 = new Trainer(1, "krupa", 45000, 34000); // employee object
 var trainer2 = new Trainer(2, 'vina', 45000, 23000, 'technical trainer');
 console.log(trainer1.getDetails()); // inherited overriding method // dynamic polymorphism
+/*
+rules :
+method name and parameter list must be same
+scope : same, increase  can not decrease
+return type primitive : then same
+return type void : then u can change in subclass method
+return type is object : then u can return covarient*/
