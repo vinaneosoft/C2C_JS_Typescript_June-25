@@ -14,6 +14,30 @@ class BankAccount{
         private customer=new Customer(), 
         private accountNUmber=0)
         {}
+        // getter setters
+
+        get accBalance(){
+            return this.accountBalance
+        }
+        set accBalance(accountBalance:number){
+            this.accountBalance=accountBalance;
+        }
+        get accType(){
+            return this.accountType;
+        }
+       // A 'set' accessor cannot have a return type annotation.
+        set accType(accountType){
+            this.accountType=accountType
+        }
+
+        get cust(){
+            return this.customer
+        }
+
+        set cust(customer){
+            this.customer=customer
+        }
+
     // instance methods
 
      checkBalance(){
@@ -39,14 +63,15 @@ console.log(account1);
 let customer2=new Customer(9090909090, 'ZP road, Airoli', 'Pravin Patil', 1212);
 let account2=new BankAccount('salary', 40000, customer2, 232323);
 console.log(account2);
-console.log(account2.accountBalance); //getter
+//not callable because it is a 'get' accessor
+console.log(account2.accBalance); //getter
 
 
 // create one more customer and its account
 let customer3=new Customer(808070808080, 'MG road, Pune', 'Karuna Patil', 3232);
 let account3=new BankAccount('current', 30000, customer3, 454545);
 console.log(account3);
-account3.accountType='salary'; // setter
+account3.accType='salary'; // setter
 //Q. what is address of customer of account2
 const address=account2.customer.custAddress; // getter
 
