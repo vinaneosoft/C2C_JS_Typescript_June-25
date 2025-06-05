@@ -84,8 +84,8 @@ account3.accType='salary'; // setter
 console.log(account3.accType); // getter
 
 //Q. what is address of customer of account2
-const address=account2.customer.custAddress; // getter
+const address=account2.cust.custAdd; // getter
 
 //Q. Change contact number of customer of account3
-account3.customer.custMobile=78787878787;  // setter
+account3.cust.custMob=78787878787;  // setter
 
