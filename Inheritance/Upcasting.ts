@@ -35,16 +35,15 @@ class Trainer extends Employee{
     }
 }// end
 
+class Developer extends Employee{
+    developmentTechnology='JAVA';
+    currentProject='SVC';
 
-let employee1:Employee=new Employee(2,"hari",45000);
-console.log( employee1.getDetails());
+    public getDetails():string {
+        return `${super.getDetails()} Technlogy for Dev: ${this.developmentTechnology} Current Project : ${this.currentProject}`
+    }
 
-let trainer1=new Trainer(1, "krupa", 45000,34000);  // employee object
-let trainer2:Trainer;
-trainer2=new Trainer(2, 'vina', 45000, 23000,'technical trainer');
-
-console.log(trainer1.getDetails()); // inherited overriding method // dynamic polymorphism
-
+}
 
 /*
 rules :
@@ -54,3 +53,28 @@ return type primitive : then same
 return type void : then u can change in subclass method
 return type is object : then u can return covarient*/
 
+let employee:Employee;
+employee=new Trainer();
+
+console.log( employee.getDetails());
+
+
+employee=new Developer();
+console.log( employee.getDetails());
+
+
+
+// Employee, Trainer, Developer
+let e1=new Employee(1);
+let tr=new Trainer(2);
+let dev=new Developer(3);
+
+function meeting(emp:Employee){
+    console.log(emp.employeeId);
+   console.log( emp.getDetails()); // polymorphism
+   
+}
+
+meeting(e1);
+meeting(tr);
+meeting(dev);
