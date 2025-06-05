@@ -1,19 +1,11 @@
 class BankAccount{
-    accountNumber:number;
-    customerId:number;
-    customerName:string;
-    accountBalance:number;
-    accountType:string
-    // Multiple constructor implementations are not allowed.
-    // p- constructor
-    constructor(accountType='savings', accbal=0, custname='AAA', custid=0, accnum=0){
-        console.log("called..");
-        this.accountNumber=accnum;
-        this.accountType=accountType;
-        this.accountBalance=accbal;
-        this.customerId=custid;
-        this.customerName=custname
-        
+// when u declare instance variables directly as a parameter of constructor then give atleast one visibility
+//then constructor can differentiate between local and instance variables 
+    constructor(public accountType='savings', 
+        public accountBalance=0, 
+        public customerName='AAA', 
+        public customerId=0, 
+        public accountNumber=0){
     }
     checkBalance(){
         return this.accountBalance;
@@ -43,8 +35,6 @@ const account6=new BankAccount("savings", 20000,'kareena p', 2121, 3333333);
 console.log(account1);
 console.log(account2);
 console.log(account3);
-
-
 
 
 
