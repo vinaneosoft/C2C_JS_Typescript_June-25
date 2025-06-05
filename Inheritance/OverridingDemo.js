@@ -51,6 +51,8 @@ var Trainer = /** @class */ (function (_super) {
     };
     return Trainer;
 }(Employee)); // end
+var employee1 = new Employee(2, "hari", 45000);
+console.log(employee1.getDetails());
 var trainer1 = new Trainer(1, "krupa", 45000, 34000); // employee object
 var trainer2 = new Trainer(2, 'vina', 45000, 23000, 'technical trainer');
 console.log(trainer1.getDetails()); // inherited overriding method // dynamic polymorphism

@@ -5,10 +5,12 @@ class Employee {
     public employeeSalary=0){
         console.log("super class");
     }
-    public getDetails():string{
+    public getDetails():void{
         console.log("super method");
-        return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
+        //return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
     }
+
+   
 }
 class Trainer extends Employee{
     constructor(empId=0, 
@@ -25,8 +27,15 @@ class Trainer extends Employee{
         console.log("sub method");
         return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}
         Variable Pay: ${this.variablePay} type: ${this.trainerType}`
+       
     }
+
+   
 }// end
+
+let employee1=new Employee(2,"hari",45000);
+console.log( employee1.getDetails());
+
 
 let trainer1=new Trainer(1, "krupa", 45000,34000);  // employee object
 let trainer2=new Trainer(2, 'vina', 45000, 23000,'technical trainer');
@@ -35,5 +44,11 @@ console.log(trainer1.getDetails()); // inherited overriding method // dynamic po
 
 
 
-
+/*
+rules :
+method name and parameter list must be same
+scope : same, increase  can not decrease
+return type primitive : then same
+return type void : then u can change in subclass method
+return type is object : then u can return covarient*/
 
