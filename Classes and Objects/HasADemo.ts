@@ -2,8 +2,7 @@ class Customer{
     constructor(public custMobile=0, 
         public custAddress="BBB", 
         public custName="AAA", 
-        public custId=0){
-        
+        public custId=0){  
     }
     // instance method
 }
