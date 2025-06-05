@@ -4,9 +4,21 @@ class Customer{
         private custName="AAA", 
         private custId=0){  
     }
+    // getter setter
+    set custAdd(custAddress:string){
+        this.custAddress=custAddress;
+    }
+    get custAdd(){
+        return this.custAddress
+    }
+    set custMob(custMobile:number){
+        this.custMobile=custMobile
+    }
+    get custMob(){
+        return this.custMobile;
+    }
     // instance method
-
-    // public mediator
+   
 }
 class BankAccount{
     constructor(private accountType='savings', 
@@ -15,7 +27,6 @@ class BankAccount{
         private accountNUmber=0)
         {}
         // getter setters
-
         get accBalance(){
             return this.accountBalance
         }
@@ -26,15 +37,13 @@ class BankAccount{
             return this.accountType;
         }
        // A 'set' accessor cannot have a return type annotation.
-        set accType(accountType){
+        set accType(accountType:string){
             this.accountType=accountType
         }
-
         get cust(){
             return this.customer
         }
-
-        set cust(customer){
+        set cust(customer:Customer){
             this.customer=customer
         }
 
@@ -72,6 +81,8 @@ let customer3=new Customer(808070808080, 'MG road, Pune', 'Karuna Patil', 3232);
 let account3=new BankAccount('current', 30000, customer3, 454545);
 console.log(account3);
 account3.accType='salary'; // setter
+console.log(account3.accType); // getter
+
 //Q. what is address of customer of account2
 const address=account2.customer.custAddress; // getter
 
