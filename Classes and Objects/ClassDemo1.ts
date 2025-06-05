@@ -33,7 +33,7 @@ class BankAccount{
     }
 }
 
-const account1=new BankAccount(); // 0-p // constructor gets implicitly called when we create new object
+const account1=new BankAccount(); // 0-p // constructor gets implicitly called when we create new object, constructor initializes object
 console.log(account1);
 console.log(account1.accountNumber);
 account1.accountNumber=1;   // state change in one object never affects other objects
@@ -58,7 +58,7 @@ console.log(account2);
 
 // also withdraw some amount from both the accounts
 
-let account3=account1; // c called?
+let account3=account1; // constructor called? no
 
 console.log(account3==account1);
 console.log(account1==account2);
