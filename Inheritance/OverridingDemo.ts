@@ -5,7 +5,7 @@ class Employee {
     public employeeSalary=0){
         console.log("super class");
     }
-    getDetails(){
+    public getDetails():string{
         console.log("super method");
         return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
     }
@@ -21,9 +21,8 @@ class Trainer extends Employee{
     getTotalSalary(){
         return this.employeeSalary+this.variablePay;
     }
-    getDetails(){
+    public getDetails():string{
         console.log("sub method");
-        
         return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}
         Variable Pay: ${this.variablePay} type: ${this.trainerType}`
     }
