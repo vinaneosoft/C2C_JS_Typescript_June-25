@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BankAccount = void 0;
 var BankAccount = /** @class */ (function () {
     function BankAccount(accountType, accountBalance, customerName, customerId, accountNumber) {
         if (accountType === void 0) { accountType = 'savings'; }
@@ -15,10 +18,15 @@ var BankAccount = /** @class */ (function () {
         // used to initialize instance variables
     }
     BankAccount.incrementCount = function () {
-        BankAccount.totalaccounts++;
+        this.totalaccounts++; //this: typeof BankAccount
+        // can we acess instance members in static area using this? NO
+        //console.log(this.accountType);
+        // this.checkBalance();
     };
     BankAccount.prototype.checkBalance = function () {
-        return this.accountBalance;
+        // can we access static members in object area? Yes but via classname
+        // console.log(BankAccount.totalaccounts);
+        return this.accountBalance; //this: this
     };
     BankAccount.prototype.deposit = function (deptamount) {
         this.accountBalance = this.accountBalance + deptamount;
@@ -34,6 +42,7 @@ var BankAccount = /** @class */ (function () {
     };
     return BankAccount;
 }());
+exports.BankAccount = BankAccount;
 (function () {
     console.log("in block1");
     BankAccount.totalaccounts = 0; // used to intialize static variables

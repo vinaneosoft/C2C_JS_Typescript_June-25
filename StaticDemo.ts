@@ -1,4 +1,4 @@
-class BankAccount{
+export class BankAccount{
     static totalaccounts:number;
     static{
         console.log("in block1");
@@ -18,8 +18,14 @@ class BankAccount{
     }
     static incrementCount(){
         this.totalaccounts++; //this: typeof BankAccount
+        // can we acess instance members in static area using this? NO
+        //console.log(this.accountType);
+       // this.checkBalance();
     }
     checkBalance(){
+        // can we access static members in object area? Yes but via classname
+       // console.log(BankAccount.totalaccounts);
+        
         return this.accountBalance; //this: this
     }
     deposit(deptamount:number):number{
@@ -34,10 +40,15 @@ class BankAccount{
             this.accountBalance=this.accountBalance-withamount;
         return this.accountBalance
     }
+    showAccount(){
+        console.log(this.accountType);
+        
+    }
 }
 
 console.log("count:"+BankAccount.totalaccounts);
 const account1=new BankAccount();  // implicitly goes to constructor
+account1.showAccount()
 const account2=new BankAccount("salary");
 const account3=new BankAccount("savings", 20000);
 const account4=new BankAccount("current", 20000,'bina p');
