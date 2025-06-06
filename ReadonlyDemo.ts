@@ -1,8 +1,10 @@
 
 class Circle{
+    readonly radius:number;
     static readonly pie=3.142;
-    constructor(public readonly radius=0){
 
+    constructor(radius:number){
+        this.radius=radius;
     }
     getArea(){
         return Circle.pie+this.radius+this.radius
