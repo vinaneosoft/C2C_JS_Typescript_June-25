@@ -2,7 +2,6 @@ interface EmployeeIntf{
     empId:number;
     empName:string;
     trainerType?:string;
-
     getSalary():void;
     getVariablePay?():void;
 }
@@ -14,7 +13,6 @@ class NeoDeveloper implements EmployeeIntf{
         //impl
     }
 }
-
 class NeoTrainer implements EmployeeIntf{
     empId:number;
     empName:string;
@@ -26,8 +24,6 @@ class NeoTrainer implements EmployeeIntf{
         //impl
     }
 }
-
-
 
 let emp:EmployeeIntf;
 emp=new NeoDeveloper();
