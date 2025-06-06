@@ -28,7 +28,7 @@ class Rectangle extends TwoDShape{
 //Cannot create an instance of an abstract class.
 //let shape=new Shape(); // not fully implemented
 
-let shape:Shape;
+let shape:Shape; 
 
 shape=new Circle();  // upcasting // you can created abstract class reference
 console.log(shape.getArea()); // Circle
