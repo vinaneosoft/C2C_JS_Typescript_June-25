@@ -7,7 +7,7 @@ class Employee {
     constructor(){
         console.log("super class");
     }
-    getDetails(){
+     getDetails(){
         return `Employee id : ${this.employeeId} Name: ${this.employeeName} Monthly Salary : ${this.employeeSalary}`
     }
 }

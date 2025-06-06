@@ -32,7 +32,30 @@ let shape:Shape;
 
 shape=new Circle();  // upcasting // you can created abstract class reference
 console.log(shape.getArea()); // Circle
+shape.shapeType='2D'
+shape.getShapeType();
 
 shape=new Rectangle();
 console.log(shape.getArea()); // Rectangle
 
+
+
+
+
+
+
+
+
+abstract class A{
+ abc(){
+
+ }
+}
+
+interface B{
+    // variable signatures and method signature
+}
+
+class C implements B{
+
+}
