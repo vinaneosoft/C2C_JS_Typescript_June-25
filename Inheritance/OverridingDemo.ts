@@ -48,9 +48,11 @@ console.log(trainer1.getDetails()); // inherited overriding method // dynamic po
 
 /*
 rules :
-method name and parameter list must be same
+method name must be same
+paramter list : same and less allowed,  more not allowed
 scope : same, increase  can not decrease
 return type primitive : then same
 return type void : then u can change in subclass method
-return type is object : then u can return covarient*/
+return type is object : then u can return covarient
+*/
 
