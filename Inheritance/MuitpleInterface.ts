@@ -1,20 +1,15 @@
 
-
-class Father{
-    dream():string{
-        return "Doctor"
-    }
+interface Father{
+     dream():string;
 }
 interface Mother{
     dream():string;
 }
-interface XYZ extends Father, Mother{
 
-}
 
-class Child extends Father implements Mother{
+class Child implements Mother, Father{
     dream() {
-        return super.dream();
-       
+       // impl
+       return "Lawyer"
     }
 }
