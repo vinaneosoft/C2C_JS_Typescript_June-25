@@ -41,11 +41,6 @@ console.log(shape.getArea()); // Rectangle
 
 
 
-
-
-
-
-
 abstract class A{
  abc(){
 
