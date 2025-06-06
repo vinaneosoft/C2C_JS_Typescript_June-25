@@ -5,11 +5,11 @@ class Company{
 
     }
     static getInstance():Company{
-            if(Company.company==null){
-                Company.company=new Company();
-                console.log("object created");
-            }
-            return Company.company;
+        if(Company.company==null){
+            Company.company=new Company();
+            console.log("object created");
+        }
+        return Company.company;
     }
 }
 let company1=Company.getInstance();
