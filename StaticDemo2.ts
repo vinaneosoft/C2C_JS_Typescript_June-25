@@ -1,7 +1,5 @@
 import { BankAccount } from "./StaticDemo";
 class Bank{
-    
-
     static showBankAccount(acc:BankAccount){
         // static method:  static memebers via classname, this
         // static method : non static members via this : no, via obj : yes
