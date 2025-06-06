@@ -17,10 +17,10 @@ class BankAccount{
             // used to initialize instance variables
     }
     static incrementCount(){
-        BankAccount.totalaccounts++;
+        this.totalaccounts++; //this: typeof BankAccount
     }
     checkBalance(){
-        return this.accountBalance;
+        return this.accountBalance; //this: this
     }
     deposit(deptamount:number):number{
         this.accountBalance=this.accountBalance+deptamount;
