@@ -17,7 +17,6 @@ export class Employee {
 }
 
 
-
 let companyName="Neosoft";
 export default companyName;
 
