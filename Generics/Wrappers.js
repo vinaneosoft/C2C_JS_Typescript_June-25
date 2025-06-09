@@ -19,11 +19,14 @@ console.log(typeof b2);
 b2 = new Boolean(true); // this is only the way to change wrapper value
 // immutable 
 var barray = [true, false, new Boolean(true), new Boolean(false)];
+var b3 = new Boolean("hi");
+console.log(b3); // true returned for any value other than false
 var s1 = "hello";
-var s2 = new String('hi');
-var ss = "45";
-console.log(typeof ss);
-var nn = parseInt(ss);
-console.log(typeof nn);
-var ss2 = new String("56");
-console.log(typeof ss2);
+console.log(typeof s1);
+var s2 = new String('hello');
+console.log(typeof s2);
+var conts = s1 + " hi";
+console.log(s1);
+console.log(conts);
+s1 = s1.concat(" welcome");
+console.log(s1);
