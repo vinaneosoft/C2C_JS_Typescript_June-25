@@ -1,0 +1,22 @@
+// unique, ordered, nonindexed
+let idSet = new Set();
+idSet.add(123);
+idSet.add(234);
+idSet.add(123);
+idSet.add(167);
+idSet.add(167);
+idSet.add(500);
+idSet.add(500);
+console.log(idSet.size);
+console.log(idSet.entries());
+console.log(idSet.keys());
+let mymap = new Map();
+mymap.set(123, 5656565656);
+mymap.set(321, 88888888888);
+mymap.set(123, 8989898989);
+mymap.set(355, 88888888888);
+console.log(mymap);
+let mySet = new Set();
+mySet.add(45);
+mySet.add('hi');
+mySet.add(null);
