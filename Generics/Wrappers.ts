@@ -45,3 +45,25 @@ console.log(conts);
 s1=s1.concat(" welcome");
 console.log(s1);  // reference variable is same which was pointing to original string
 
+const ss1='india';
+const ss2='india';
+const ss3='INDIA';
+
+console.log(ss1==ss2); // true
+console.log(ss1.valueOf()==ss2.valueOf()); //true
+if(s1==s2)
+        console.log("both string are equal");
+
+
+let ss4=new String('india');
+let ss5=new String('india');
+        
+console.log(ss4==ss5); // false
+console.log(ss4.valueOf()==ss5.valueOf()); // true
+
+if(ss4.valueOf()==ss5.valueOf())
+        console.log("both strings are equal");
+else
+    console.log("both string are not equal");
+    
+        
