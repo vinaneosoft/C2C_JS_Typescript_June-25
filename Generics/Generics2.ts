@@ -7,7 +7,6 @@ class MyObject<T>{
         return this.value;
     }
 }
-
 let ob1=new MyObject<number>(45);
 let v1=ob1.getValue();
 let ob2=new MyObject<string>("hello");

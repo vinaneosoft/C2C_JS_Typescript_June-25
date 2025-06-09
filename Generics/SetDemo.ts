@@ -11,9 +11,6 @@ console.log(idSet.size);
 console.log(idSet.entries());
 console.log(idSet.keys());
 
-
-
-
 let mySet=new Set();
 mySet.add(45);
 mySet.add('hi');
