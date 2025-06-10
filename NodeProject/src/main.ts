@@ -1,4 +1,5 @@
 
+/// <reference path="../types/jquery.d.ts" />
 
 import $ from "my-jquery";
 
