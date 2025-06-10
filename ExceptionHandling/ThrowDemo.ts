@@ -18,7 +18,6 @@ function getLength(value: any) {
 function add(...nums:any){
     return nums.reduce((acc,num)=>acc+num, 0);
 }
-
 getLength("hello"); 
 console.log("--------");
 try{

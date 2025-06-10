@@ -1,3 +1,4 @@
+/* try with muitple catch not allowed */
 function getLength(value) {
     try {
         console.log("code before length display......");
