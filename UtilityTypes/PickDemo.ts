@@ -10,10 +10,14 @@ interface User {
 // Pick only 'id' and 'name' from User
 type UserPreview = Pick<User, "id" | "name">;
 
+let user1:UserPreview={
+  id:101,
+  name:'poonam'
+}
+
 const showUser = (user: UserPreview) => {
   console.log(`ID: ${user.id}, Name: ${user.name}`);
 };
-
 // Usage
 showUser({ id: 1, name: "Alice" });
 

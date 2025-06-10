@@ -18,8 +18,6 @@ let user1:Partial<User>={
    email: "hari@gmail.com"
 }
 
-
-
 // Partial User: all properties become optional
 const updateUser = (updates: Partial<User>) => {
     return {...user, ...updates}
