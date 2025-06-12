@@ -30,5 +30,5 @@ __decorate([
 ], Calculator.prototype, "multiply", null);
 // Testing the decorated methods
 const calc = new Calculator();
-calc.add(3, 5);
-calc.multiply(4, 6);
+console.log(calc.add(3, 5));
+console.log(calc.multiply(4, 6));
